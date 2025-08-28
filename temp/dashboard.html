@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - FindIt AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">FindIt AI</a>
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <a href="browse.html" class="hidden md:block text-gray-600 hover:text-blue-600">Browse Items</a>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Logout</a>
+                    <img class="w-10 h-10 rounded-full border-2 border-blue-500" src="https://i.pravatar.cc/40" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
+            <div>
+                <h1 class="text-4xl font-bold text-gray-900">My Dashboard</h1>
+                <p class="text-gray-600 mt-1">Welcome back! Here are your reports.</p>
+            </div>
+            <div class="mt-4 sm:mt-0 flex gap-2">
+                 <a href="report-lost.html" class="px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">Report a Lost Item</a>
+                 <a href="report-found.html" class="px-5 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition duration-300">Report a Found Item</a>
+            </div>
+        </div>
+
+        <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">My Lost Reports</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-4">
+                        <span class="inline-block bg-green-200 text-green-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Match Found!</span>
+                    </div>
+                    <img src="https://placehold.co/400x300/e2e8f0/334155?text=Item+Image" alt="Lost Item" class="w-full h-48 object-cover">
+                    <div class="p-4 flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">Black Leather Wallet</h3>
+                        <p class="text-sm text-gray-500 mt-1">Reported on: Aug 26, 2025</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t flex items-center justify-end gap-2">
+                         <a href="#" class="text-sm font-medium text-gray-600 hover:text-blue-600">Edit</a>
+                         <a href="match-details.html" class="px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 text-sm">View Match</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-4">
+                        <span class="inline-block bg-blue-200 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Searching</span>
+                    </div>
+                    <img src="https://placehold.co/400x300/fef9c3/854d0e?text=Item+Image" alt="Lost Item" class="w-full h-48 object-cover">
+                    <div class="p-4 flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">Gold-rimmed Glasses</h3>
+                        <p class="text-sm text-gray-500 mt-1">Reported on: Aug 23, 2025</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t flex items-center justify-end gap-2">
+                         <a href="#" class="text-sm font-medium text-gray-600 hover:text-blue-600">Edit</a>
+                         <a href="#" class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 text-sm">Delete</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col opacity-70">
+                    <div class="p-4">
+                        <span class="inline-block bg-gray-200 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Resolved</span>
+                    </div>
+                    <img src="https://placehold.co/400x300/ccfbf1/0f766e?text=Item+Image" alt="Lost Item" class="w-full h-48 object-cover">
+                    <div class="p-4 flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">AirPods Pro Case</h3>
+                        <p class="text-sm text-gray-500 mt-1">Reported on: Aug 24, 2025</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t flex items-center justify-end gap-2">
+                         <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 font-semibold rounded-lg text-sm cursor-not-allowed">Archived</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">My Found Reports</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-4">
+                        <span class="inline-block bg-yellow-200 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Waiting for Claim</span>
+                    </div>
+                    <img src="https://placehold.co/400x300/fecaca/991b1b?text=Item+Image" alt="Found Item" class="w-full h-48 object-cover">
+                    <div class="p-4 flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">Set of Keys</h3>
+                        <p class="text-sm text-gray-500 mt-1">Reported on: Aug 25, 2025</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t flex items-center justify-end gap-2">
+                         <a href="#" class="text-sm font-medium text-gray-600 hover:text-blue-600">Edit</a>
+                         <a href="#" class="px-4 py-2 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 text-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white border-t mt-12">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 FindIt AI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lost & Found Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="text-2xl font-bold text-blue-600">FindIt AI</a>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="browse.html" class="text-gray-600 hover:text-blue-600 font-medium">Browse Items</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-blue-600 font-medium">How It Works</a>
+                    <a href="#" class="flex items-center justify-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100">
+                        <svg class="w-5 h-5" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.9 0 6.9 1.6 9.1 3.7l6.9-6.9C35.9 2.5 30.5 0 24 0 14.9 0 7.3 5.4 4.3 12.9l8.1 6.3C13.8 13.5 18.5 9.5 24 9.5z"></path><path fill="#34A853" d="M46.2 25.1c0-1.6-.1-3.2-.4-4.8H24v9.1h12.4c-.5 3-2.1 5.5-4.6 7.2l7.7 6c4.5-4.2 7.1-10.1 7.1-17.5z"></path><path fill="#FBBC05" d="M12.4 28.2c-.4-1.2-.6-2.5-.6-3.8s.2-2.6.6-3.8l-8.1-6.3C1.6 17.6 0 21.6 0 26c0 4.4 1.6 8.4 4.3 11.5l8.1-6.3z"></path><path fill="#EA4335" d="M24 48c6.5 0 11.9-2.2 15.9-5.9l-7.7-6c-2.2 1.5-4.9 2.4-8.2 2.4-5.5 0-10.2-4-11.9-9.4l-8.1 6.3C7.3 42.6 14.9 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
+                        <span class="text-gray-700 font-medium">Sign in</span>
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="browse.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Browse Items</a>
+                <a href="#how-it-works" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">How It Works</a>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Sign in with Google</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                Lost Something? <span class="text-blue-600">Find It with AI.</span>
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Our smart platform uses image recognition and AI-powered search to reunite you with your lost belongings faster than ever before.
+            </p>
+            <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                <a href="report-lost.html" class="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                    Report a Lost Item
+                </a>
+                <a href="report-found.html" class="w-full sm:w-auto px-8 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition duration-300">
+                    I Found Something
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">1. Report Your Item</h3>
+                    <p class="text-gray-600">
+                        Quickly submit a report with a photo and description of your lost or found item. It only takes a minute.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">2. AI Finds Matches</h3>
+                    <p class="text-gray-600">
+                        Our AI instantly scans the database, comparing images and details to find potential matches for you.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">3. Connect & Retrieve</h3>
+                    <p class="text-gray-600">
+                        Once a match is found, connect securely through our in-app chat to arrange a safe return.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 FindIt AI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

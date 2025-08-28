@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Submitted - FindIt AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">FindIt AI</a>
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <a href="browse.html" class="hidden md:block text-gray-600 hover:text-blue-600">Browse Items</a>
+                <a href="index.html#how-it-works" class="hidden md:block text-gray-600 hover:text-blue-600">How It Works</a>
+                <a href="#" class="flex items-center justify-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 transition duration-200">
+                    <svg class="w-5 h-5" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.9 0 6.9 1.6 9.1 3.7l6.9-6.9C35.9 2.5 30.5 0 24 0 14.9 0 7.3 5.4 4.3 12.9l8.1 6.3C13.8 13.5 18.5 9.5 24 9.5z"></path><path fill="#34A853" d="M46.2 25.1c0-1.6-.1-3.2-.4-4.8H24v9.1h12.4c-.5 3-2.1 5.5-4.6 7.2l7.7 6c4.5-4.2 7.1-10.1 7.1-17.5z"></path><path fill="#FBBC05" d="M12.4 28.2c-.4-1.2-.6-2.5-.6-3.8s.2-2.6.6-3.8l-8.1-6.3C1.6 17.6 0 21.6 0 26c0 4.4 1.6 8.4 4.3 11.5l8.1-6.3z"></path><path fill="#EA4335" d="M24 48c6.5 0 11.9-2.2 15.9-5.9l-7.7-6c-2.2 1.5-4.9 2.4-8.2 2.4-5.5 0-10.2-4-11.9-9.4l-8.1 6.3C7.3 42.6 14.9 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
+                    <span class="text-gray-700 font-medium">Sign in <span class="hidden md:inline">with Google</span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-6 py-12 flex items-center justify-center">
+        <div class="bg-white p-8 sm:p-12 rounded-lg shadow-lg text-center max-w-2xl">
+            <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6">
+                <svg class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">Your Report Has Been Submitted!</h1>
+
+            <p class="mt-4 text-gray-600 text-lg">
+                Thank you for submitting your report. Our AI is now actively scanning for potential matches. We will send you an email notification as soon as a likely match is found.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="dashboard.html" class="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                    Go to My Dashboard
+                </a>
+                <a href="index.html" class="w-full sm:w-auto px-8 py-3 text-gray-700 font-semibold hover:text-blue-600 transition duration-300">
+                    Back to Homepage
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-white border-t">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 FindIt AI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

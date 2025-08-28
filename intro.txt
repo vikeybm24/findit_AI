@@ -1,0 +1,126 @@
+1. Project Description
+Project Title: AI-Powered Lost & Found Platform
+
+Problem Statement: On large campuses, in offices, or at public events, a significant number of personal items are lost daily. Existing lost and found systems are inefficient, often relying on manual processes and physical collection points, which leads to a low rate of item recovery and a frustrating experience for users.
+
+Solution: This project proposes the development of an AI-Powered Lost & Found Platform. The system will use a web application to streamline the process of reporting and retrieving lost items by leveraging AI for intelligent item matching. By combining visual and text-based search, the platform will connect users in real-time and significantly increase the chances of an item being returned to its rightful owner.
+
+Project Goals:
+
+To create a secure and user-friendly platform for reporting lost and found items.
+
+To implement an AI-driven matching system that uses image recognition and natural language processing (NLP) to find potential matches.
+
+To provide a secure communication channel for users to coordinate the return of items.
+
+To demonstrate a scalable and efficient solution that can be applied to various real-world scenarios, such as universities, airports, or large event venues.
+
+2. User Flow
+The user flow is designed to be intuitive and direct, guiding users through the core functionalities of reporting, matching, and returning an item.
+
+User Roles
+Lost User: A person who has lost an item.
+
+Found User: A person who has found an item.
+
+Admin: A user with special permissions to manage and moderate the system.
+
+Core User Flow
+User Authentication:
+
+Sign Up: New user provides a username, email, and password. The system creates a secure account.
+
+Login: Existing user logs in to access their personal dashboard and system features.
+
+Report an Item:
+
+Report Lost: A "Lost User" navigates to the "Report Lost Item" page. They upload a photo of the item (or a similar item), provide a detailed text description, and specify the last known location. The system saves the report in the database.
+
+Report Found: A "Found User" navigates to the "Report Found Item" page. They upload a photo of the found item and provide a brief description. The system uses AI to analyze the image and text.
+
+AI Matching Process:
+
+Upon a new item submission (either lost or found), the system's AI component triggers a similarity search.
+
+The system compares the new item's image and text embeddings against all existing reports in the database.
+
+If the similarity score exceeds a predefined threshold, the system flags it as a potential match.
+
+Notification and Claim:
+
+Lost User Notification: The "Lost User" receives an email and an in-app notification: "A potential match has been found for your lost [item name]!"
+
+Claim Item: The "Lost User" can view the matched item and its description. They click a "Claim" button, which sends a claim request to the "Found User."
+
+Secure Communication & Return:
+
+Chat Request: Once the claim is accepted, a secure, in-app chat is initiated between the two users.
+
+Item Verification: The users can use the chat to arrange a meeting and verify the item (e.g., "What was the wallpaper on your phone?").
+
+Item Return: Once the item is successfully returned, either user can mark the report as "Resolved" in the system.
+
+3. Project Technology and Requirements
+Frontend (Client-Side):
+
+React.js: A robust and modern JavaScript library for building a dynamic, single-page application (SPA) with a great user experience.
+
+HTML/CSS: For structuring and styling the user interface.
+
+JavaScript: For interactivity and API communication.
+
+Axios: A promise-based HTTP client for making API requests from React to the Django backend.
+
+React Router: For handling navigation and routing between different pages in the application.
+
+Backend (Server-Side):
+
+Django: A high-level Python web framework that enables rapid development of secure and scalable APIs.
+
+Django REST Framework (DRF): A powerful toolkit for building the RESTful API endpoints for the React front end.
+
+Database: PostgreSQL or SQLite (for a simple MVP). PostgreSQL is recommended for a scalable solution.
+
+Authentication: djangorestframework-simplejwt for implementing secure, token-based user authentication.
+
+AI & Machine Learning:
+
+Image Processing: Use a pre-trained deep learning model like ResNet or MobileNetV2 to generate image embeddings.
+
+NLP: Use a pre-trained model like Sentence-Transformers or OpenAI's text embeddings to convert text descriptions into vectors.
+
+Vector Database: For the MVP, a simple in-memory search is sufficient. For a scalable version, a vector database like Pinecone or FAISS is used to store and quickly search high-dimensional vectors (embeddings) to find matches.
+
+Communication & Infrastructure:
+
+Real-time Chat: Firebase Realtime Database or a similar service to handle the secure, real-time messaging between users.
+
+Email Service: SendGrid or Mailgun for sending automated notifications (e.g., new match found, claim request received).
+
+4. Project Scope and Deliverables
+In-Scope:
+
+User authentication (sign-up, login, logout).
+
+API endpoints for reporting lost and found items.
+
+AI matching logic for image and text similarity.
+
+A user dashboard to view personal reports.
+
+Secure, in-app chat for matched users.
+
+Basic search functionality for browsing items.
+
+Out-of-Scope (Future Enhancements):
+
+Administrator dashboard for moderation.
+
+Location-based matching using GPS coordinates.
+
+Gamification and reward systems for users.
+
+User profiles with past report history.
+
+Mobile application (iOS/Android) development.
+

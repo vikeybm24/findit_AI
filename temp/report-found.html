@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Found Item - FindIt AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">FindIt AI</a>
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <a href="browse.html" class="hidden md:block text-gray-600 hover:text-blue-600">Browse Items</a>
+                <a href="index.html#how-it-works" class="hidden md:block text-gray-600 hover:text-blue-600">How It Works</a>
+                
+                <a href="#" class="flex items-center justify-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 transition duration-200">
+                    <svg class="w-5 h-5" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.9 0 6.9 1.6 9.1 3.7l6.9-6.9C35.9 2.5 30.5 0 24 0 14.9 0 7.3 5.4 4.3 12.9l8.1 6.3C13.8 13.5 18.5 9.5 24 9.5z"></path><path fill="#34A853" d="M46.2 25.1c0-1.6-.1-3.2-.4-4.8H24v9.1h12.4c-.5 3-2.1 5.5-4.6 7.2l7.7 6c4.5-4.2 7.1-10.1 7.1-17.5z"></path><path fill="#FBBC05" d="M12.4 28.2c-.4-1.2-.6-2.5-.6-3.8s.2-2.6.6-3.8l-8.1-6.3C1.6 17.6 0 21.6 0 26c0 4.4 1.6 8.4 4.3 11.5l8.1-6.3z"></path><path fill="#EA4335" d="M24 48c6.5 0 11.9-2.2 15.9-5.9l-7.7-6c-2.2 1.5-4.9 2.4-8.2 2.4-5.5 0-10.2-4-11.9-9.4l-8.1 6.3C7.3 42.6 14.9 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
+                    <span class="text-gray-700 font-medium">Sign in <span class="hidden md:inline">with Google</span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Report a Found Item</h1>
+            <p class="text-gray-600 mb-8">Thank you for helping! Please provide details about the item you found.</p>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <form action="#" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <div class="md:col-span-2">
+                            <label for="item-name" class="block text-sm font-medium text-gray-700 mb-1">Item Name</label>
+                            <input type="text" id="item-name" name="item-name" placeholder="e.g., Blue Backpack" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div>
+                            <label for="category" class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                            <select id="category" name="category" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>Select a category...</option>
+                                <option>Electronics</option>
+                                <option>Keys & Wallets</option>
+                                <option>Bags & Luggage</option>
+                                <option>Clothing</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="date-found" class="block text-sm font-medium text-gray-700 mb-1">Date Found</label>
+                            <input type="date" id="date-found" name="date-found" value="2025-08-27" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-500">
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Location Found</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., Near the main entrance of the Tech Park" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Detailed Description</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Describe the item's condition, brand, color, etc. IMPORTANT: For privacy, do not include personal info like names or phone numbers you may see on the item." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Upload an Image of the Item</label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
+                                <div class="space-y-1 text-center">
+                                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                                            <span>Upload a file</span>
+                                            <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">PNG, JPG up to 10MB.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-2 text-right">
+                            <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Submit Found Report
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-white border-t mt-12">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 FindIt AI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
