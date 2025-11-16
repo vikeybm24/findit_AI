@@ -1,0 +1,42 @@
+# --- Python / Django ---
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# Django local settings
+findit-ai/*.env
+findit-ai/*.ini
+findit-ai/*.cfg
+
+# --- React / Node ---
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/dist/
+
+# --- Temp files ---
+temp/
+*.tmp
+*.cache
+
+# --- Secret / Sensitive Files ---
+client_secret_*.json
+keys.txt
+key-2.txt
+
+# --- Design ---
+Design/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
